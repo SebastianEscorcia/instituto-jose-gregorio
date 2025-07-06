@@ -1,0 +1,386 @@
+/* RESET Y ESTILOS BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary: #43a677;
+  --primary-dark: #2e7d58;
+  --secondary: #f8f9fa;
+  --accent: #43a677;
+  --text: #333333;
+  --text-light: #6c757d;
+  --white: #ffffff;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+main {
+  margin-top: 200px;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text);
+  line-height: 1.6;
+  background-color: #f5f7fa;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--primary-dark);
+}
+
+h2 {
+  font-size: 2.2rem;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2.5rem;
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 70px;
+  height: 4px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+p {
+  margin-bottom: 1.25rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary);
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--primary-dark);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.section {
+  padding: 5rem 0;
+}
+
+.section-bg {
+  background-color: var(--secondary);
+}
+
+.section-title {
+  text-align: center;
+  width: 100%;
+}
+
+.section-title::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* BOTÓN FLOTANTE WHATSAPP */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  background-color: #25d366;
+  padding: 15px;
+  border-radius: 50%;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.whatsapp-float img {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.1);
+  background-color: #128c7e;
+}
+
+/* HEADER Y NAVEGACIÓN */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: var(--white);
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.header-scrolled {
+  padding: 10px 0;
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+#nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 0;
+}
+
+#nav-container img {
+  height: 100px;
+  transition: var(--transition);
+}
+
+.header-scrolled #nav-container img {
+  height: 70px;
+}
+
+#menu-toggle {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  color: var(--primary);
+  cursor: pointer;
+  display: none;
+}
+
+#menu {
+  display: flex;
+  list-style: none;
+}
+
+.menu-item {
+  position: relative;
+  margin-left: 1.5rem;
+}
+
+.menu-item > a {
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  color: var(--text);
+  display: block;
+}
+
+.menu-item:hover > a {
+  color: var(--primary);
+}
+
+.sub-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 220px;
+  background: var(--white);
+  box-shadow: var(--shadow);
+  list-style: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: var(--transition);
+  z-index: 100;
+}
+
+.menu-item:hover .sub-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.sub-menu li {
+  border-bottom: 1px solid #eee;
+}
+
+.sub-menu li:last-child {
+  border-bottom: none;
+}
+
+.sub-menu a {
+  display: block;
+  padding: 0.8rem 1.2rem;
+  color: var(--text);
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.sub-menu a:hover {
+  background-color: var(--primary);
+  color: var(--white);
+  padding-left: 1.5rem;
+}
+
+/* BARRA SOCIAL LATERAL */
+#containter-social {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 999;
+}
+
+#social-nav {
+  background: var(--white);
+  border-radius: 30px 0 0 30px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+#social-nav ul {
+  list-style: none;
+}
+
+#social-nav li {
+  padding: 15px 20px;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+}
+
+#social-nav li:hover {
+  background: var(--primary);
+}
+
+#social-nav li:hover a {
+  color: var(--white);
+}
+
+#social-nav img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+#social-nav span {
+  font-size: 0.9rem;
+  white-space: nowrap;
+  display: none;
+  transition: var(--transition);
+}
+
+#social-nav li:hover span {
+  display: inline-block;
+}
+footer {
+  background-color: var(--white);
+  color: var(--text);
+  padding-top: 4rem;
+}
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.footer-contact img {
+  height: 80px;
+  margin-bottom: 1.5rem;
+  filter: none;
+}
+.footer-contact p {
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: flex-start;
+}
+.footer-contact strong {
+  min-width: 90px;
+  display: inline-block;
+  color: var(--primary-dark);
+}
+.footer-visitas {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.footer-visitas p {
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+.footer-copy {
+  text-align: center;
+  padding: 1.5rem 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+/* Introductoria */
+.navidad-intro {
+  max-width: 900px;
+  margin: 0 auto 4rem auto;
+  text-align: center;
+  padding: 2rem;
+}
+
+.navidad-intro h2 {
+  font-size: 2.5rem;
+  color: var(--primary-dark);
+}
+
+.navidad-intro p {
+  font-size: 1.1rem;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* Video */
+.video-navidad {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.video-navidad video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  display: block;
+  object-fit: cover;
+}
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.navidad-intro h2 {
+  animation: fadeSlideUp 1s ease-out forwards;
+}
+
+.navidad-intro p {
+  animation: fadeSlideUp 1s ease-out forwards;
+}
