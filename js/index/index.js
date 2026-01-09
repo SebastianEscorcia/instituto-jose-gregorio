@@ -47,3 +47,4 @@ document.addEventListener('DOMContentLoaded', function() {
     updateCarousel();
   }, 5000);
 });
+ document.getElementById('current-year').textContent = new Date().getFullYear();

@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Instituto Jose Gregorio Mixto - Valledupar</title>
+    <title>Instituto José Gregorio Mixto - Valledupar</title>
 
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#43A677" />
     <meta
       name="description"
-      content="Instituto Jose Gregorio, colegio privado mixto en Valledupar. Formación integral, espíritu científico, compromiso social."
+      content="Instituto José Gregorio, colegio privado mixto en Valledupar. Formación integral, espíritu científico, compromiso social."
     />
 
     <!-- Favicon -->
@@ -26,11 +26,11 @@
     <!-- Open Graph -->
     <meta
       property="og:title"
-      content="Colegio mixto privado en Valledupar - Instituto Jose Gregorio"
+      content="Colegio mixto privado en Valledupar - Instituto José Gregorio"
     />
     <meta
       property="og:description"
-      content="Instituto Jose Gregorio, colegio privado de Valledupar mixto. Formación integral con valores, ética y excelencia académica."
+      content="Instituto José Gregorio, colegio privado de Valledupar mixto. Formación integral con valores, ética y excelencia académica."
     />
     <meta property="og:image" content="/assets/images/logo-josegregorio.jpg" />
 
@@ -44,7 +44,7 @@
       <nav id="nav-container">
         <img
           src="/assets/images/Logo Jose Gregorio.png"
-          alt="Logo Instituto Jose Gregorio"
+          alt="Logo Instituto José Gregorio"
         />
         <button id="menu-toggle" aria-label="Abrir menú">&#9776;</button>
         <ul id="menu">
@@ -161,9 +161,12 @@
       </div>
       <div class="footer-copy">
         <p>
-          &copy; 2025 Instituto Jose Gregorio. Todos los derechos reservados.
+          &copy; <span id="current-year"></span> Instituto José Gregorio. Todos los derechos reservados.
         </p>
       </div>
     </footer>
+    <script>
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>

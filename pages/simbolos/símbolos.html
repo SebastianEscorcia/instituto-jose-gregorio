@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Instituto Jose Gregorio Mixto - Valledupar</title>
+    <title>Instituto José Gregorio Mixto - Valledupar</title>
 
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#43A677" />
@@ -26,11 +26,11 @@
     <!-- Open Graph -->
     <meta
       property="og:title"
-      content="Colegio mixto privado en Valledupar - Instituto Jose Gregorio"
+      content="Colegio mixto privado en Valledupar - Instituto José Gregorio"
     />
     <meta
       property="og:description"
-      content="Instituto Jose Gregorio, colegio privado de Valledupar mixto. Formación integral con valores, ética y excelencia académica."
+      content="Instituto José Gregorio, colegio privado de Valledupar mixto. Formación integral con valores, ética y excelencia académica."
     />
     <meta
       property="og:image"
@@ -47,7 +47,7 @@
       <nav id="nav-container">
         <img
           src="../../assets/images/Logo Jose Gregorio.png"
-          alt="Logo Instituto Jose Gregorio"
+          alt="Logo Instituto José Gregorio"
         />
         <button id="menu-toggle" aria-label="Abrir menú">&#9776;</button>
         <ul id="menu">
@@ -126,10 +126,10 @@
           <h2>El Escudo</h2>
           <img
             src="../../assets/images/Logo Jose Gregorio.png"
-            alt="Escudo del instituto Jose Gregorio"
+            alt="Escudo del instituto José Gregorio"
           />
           <p>
-            El escudo del Instituto Jose Gregorio representa el compromiso con
+            El escudo del Instituto José Gregorio representa el compromiso con
             el estudio y el progreso de nuestros estudiantes. El círculo verde
             simboliza la esperanza y la formación integral, mientras que el
             libro abierto refleja nuestro enfoque en el conocimiento como base
@@ -184,9 +184,12 @@
       </div>
       <div class="footer-copy">
         <p>
-          &copy; 2025 Instituto Jose Gregorio. Todos los derechos reservados.
+          &copy; <span id="current-year"></span> Instituto José Gregorio. Todos los derechos reservados.
         </p>
       </div>
     </footer>
+    <script>
+      document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
   </body>
 </html>
